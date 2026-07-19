@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Educaty",
+    "slug": "educaty",
+    "version": "1.0.0",
+    "scheme": "educaty",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.educaty.app"
+    },
+    "android": {
+      "package": "com.educaty.app",
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
