@@ -1,4 +1,4 @@
-// Educaty — Edge Function `redeem-code`
+// Listeny — Edge Function `redeem-code`
 // Resgata um cupom (promocional OU de afiliado) e CONCEDE um trial de premium via RevenueCat,
 // sem cartão. Anti-abuso: 1 trial por CONTA e 1 por APARELHO. Grava a atribuição (de onde veio).
 // Segredos: REVENUECAT_SECRET_KEY + SUPABASE_URL/SERVICE_ROLE_KEY/ANON_KEY.

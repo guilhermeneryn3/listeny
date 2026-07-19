@@ -1,4 +1,4 @@
--- Educaty — 0005 — programa de afiliados DA PLATAFORMA (afiliado indica o professor pagante).
+-- Listeny — 0005 — programa de afiliados DA PLATAFORMA (afiliado indica o professor pagante).
 -- Modelo VamAI: afiliado se cadastra logado com a conta, escolhe o próprio cupom (o "CPF"
 -- dele: único, fixo, intransferível). RLS: o dono gerencia o que é seu; o painel N3
 -- (service-role, auth.uid() nulo) aprova/verifica. Comissão fica na 0006.

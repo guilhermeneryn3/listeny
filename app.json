@@ -1,18 +1,18 @@
 {
   "expo": {
-    "name": "Educaty",
-    "slug": "educaty",
+    "name": "Listeny",
+    "slug": "listeny",
     "version": "1.0.0",
-    "scheme": "educaty",
+    "scheme": "listeny",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.educaty.app"
+      "bundleIdentifier": "com.listeny.app"
     },
     "android": {
-      "package": "com.educaty.app",
+      "package": "com.listeny.app",
       "edgeToEdgeEnabled": true
     },
     "web": {

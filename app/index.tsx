@@ -33,7 +33,7 @@ export default function Index() {
             { color: tokens.ink, fontFamily: tokens.font, marginTop: spacing.xl },
           ]}
         >
-          Educaty
+          Listeny
         </Text>
         <Text
           style={[

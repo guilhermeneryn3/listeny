@@ -1,4 +1,4 @@
-// Educaty — revenuecat-sync — grava o plano (tier) do usuário no profiles.
+// Listeny — revenuecat-sync — grava o plano (tier) do usuário no profiles.
 // Fonte da verdade: a API do RevenueCat (o client não é confiável). Chamada por:
 //   1) Webhook do RevenueCat (Authorization: Bearer <REVENUECAT_WEBHOOK_SECRET>).
 //   2) App/portal logado (Authorization: Bearer <JWT do Supabase>), após login/compra.

@@ -1,4 +1,4 @@
--- Educaty — 0001 — identidade do usuário (perfil global, cross-tenant).
+-- Listeny — 0001 — identidade do usuário (perfil global, cross-tenant).
 -- Um auth.users pode pertencer a vários orgs (tenants) com papéis diferentes (ver 0002).
 -- Este profile é a identidade da PESSOA, não do vínculo com um tenant.
 -- RLS por user_id = auth.uid(). i18n desde a base: locale default 'pt-BR'.

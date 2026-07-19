@@ -1,6 +1,6 @@
-// Educaty — Edge Function `notify-affiliate`
+// Listeny — Edge Function `notify-affiliate`
 // Envia e-mail transacional ao afiliado (via Resend) e registra em affiliate_notifications.
-// Chamada SERVER-TO-SERVER (painel N3 e educaty-web). Autenticação = segredo em
+// Chamada SERVER-TO-SERVER (painel N3 e listeny-web). Autenticação = segredo em
 // `x-notify-secret` (a anon key é pública, então a proteção efetiva é o segredo).
 // Secrets: RESEND_API_KEY, NOTIFY_SECRET, SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY.
 
@@ -19,8 +19,8 @@ function json(body: unknown, status = 200): Response {
   });
 }
 
-const FROM = 'Educaty Afiliados <noreply@educaty.app>';
-const PORTAL = 'https://afiliados.educaty.app';
+const FROM = 'Listeny Afiliados <noreply@listeny.app>';
+const PORTAL = 'https://afiliados.listeny.app';
 
 const brl = (v: number) =>
   new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v);
@@ -38,7 +38,7 @@ function reasonBlock(data: Record<string, unknown> | undefined): string {
 }
 
 function footer(path = ''): string {
-  return `<p>Acesse o portal: <a href="${PORTAL}${path}">${PORTAL.replace('https://', '')}${path}</a>.</p><p>— Equipe Educaty</p>`;
+  return `<p>Acesse o portal: <a href="${PORTAL}${path}">${PORTAL.replace('https://', '')}${path}</a>.</p><p>— Equipe Listeny</p>`;
 }
 
 function renderTemplate(
@@ -50,7 +50,7 @@ function renderTemplate(
     case 'payout_paid': {
       const amount = Number(data?.amount ?? 0);
       return {
-        subject: 'Seu pagamento foi realizado — Educaty Afiliados',
+        subject: 'Seu pagamento foi realizado — Listeny Afiliados',
         html: `<p>Olá, ${firstName}!</p>
           <p>Confirmamos o pagamento da sua comissão no valor de <strong>${brl(amount)}</strong>.</p>
           ${footer('/financeiro')}`,
@@ -58,23 +58,23 @@ function renderTemplate(
     }
     case 'affiliate_approved':
       return {
-        subject: 'Seu cadastro foi aprovado — Educaty Afiliados',
+        subject: 'Seu cadastro foi aprovado — Listeny Afiliados',
         html: `<p>Olá, ${firstName}!</p>
-          <p>Seu cadastro no Programa de Afiliados Educaty foi <strong>aprovado</strong>.</p>
+          <p>Seu cadastro no Programa de Afiliados Listeny foi <strong>aprovado</strong>.</p>
           <p>Próximo passo: conclua a <strong>verificação de identidade (KYC)</strong> em
              "Meu cadastro" para liberar o seu cupom.</p>
           ${footer('/perfil')}`,
       };
     case 'kyc_verified':
       return {
-        subject: 'Identidade verificada — seu cupom está ativo! — Educaty Afiliados',
+        subject: 'Identidade verificada — seu cupom está ativo! — Listeny Afiliados',
         html: `<p>Olá, ${firstName}!</p>
           <p>Sua identidade foi verificada e o seu <strong>cupom está ativo</strong>.</p>
           ${footer('')}`,
       };
     case 'affiliate_revision':
       return {
-        subject: 'Precisamos de um ajuste no seu cadastro — Educaty Afiliados',
+        subject: 'Precisamos de um ajuste no seu cadastro — Listeny Afiliados',
         html: `<p>Olá, ${firstName}!</p>
           <p>Revisamos seu cadastro e precisamos de um ajuste antes de aprovar.</p>
           ${reasonBlock(data)}
@@ -83,7 +83,7 @@ function renderTemplate(
       };
     case 'kyc_rejected':
       return {
-        subject: 'Sobre sua verificação de identidade — Educaty Afiliados',
+        subject: 'Sobre sua verificação de identidade — Listeny Afiliados',
         html: `<p>Olá, ${firstName}!</p>
           <p>Seus documentos de verificação de identidade não foram aprovados.</p>
           ${reasonBlock(data)}
@@ -92,7 +92,7 @@ function renderTemplate(
       };
     case 'invoice_rejected':
       return {
-        subject: 'Sobre sua nota fiscal — Educaty Afiliados',
+        subject: 'Sobre sua nota fiscal — Listeny Afiliados',
         html: `<p>Olá, ${firstName}!</p>
           <p>A nota fiscal que você enviou foi recusada.</p>
           ${reasonBlock(data)}
@@ -101,7 +101,7 @@ function renderTemplate(
       };
     case 'affiliate_rejected':
       return {
-        subject: 'Sobre seu cadastro no Programa de Afiliados — Educaty',
+        subject: 'Sobre seu cadastro no Programa de Afiliados — Listeny',
         html: `<p>Olá, ${firstName}!</p>
           <p>Infelizmente seu cadastro no Programa de Afiliados não foi aprovado no momento.</p>
           ${reasonBlock(data)}

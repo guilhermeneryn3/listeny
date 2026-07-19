@@ -1,4 +1,4 @@
-# Educaty
+# Listeny
 
 **Plataforma multi-tenant white-label de portais de aprendizado.** Cada professor/criador
 ganha o próprio **portal** (logo, cores, template de aparência, domínio próprio) para
@@ -10,9 +10,9 @@ Produto da holding **N3 Labz** — nasce federado no painel N3 e segue a arquite
 (API-first, conectores plugáveis, identidade multi-tenant, afiliados desde a base).
 
 ## Repositórios irmãos
-- **`Educaty/`** (este) — o **cérebro** (`supabase/`) + o app mobile companheiro (Expo).
-- **`educaty-web/`** — o **portal web** multi-tenant (Next.js) + landing + admin do criador.
-- **`N3 Labz/`** — o painel da holding que federa/gerencia o Educaty.
+- **`Listeny/`** (este) — o **cérebro** (`supabase/`) + o app mobile companheiro (Expo).
+- **`listeny-web/`** — o **portal web** multi-tenant (Next.js) + landing + admin do criador.
+- **`N3 Labz/`** — o painel da holding que federa/gerencia o Listeny.
 
 Web, app e painel N3 apontam para o **mesmo** projeto Supabase (o cérebro mora aqui).
 
@@ -23,7 +23,7 @@ Web, app e painel N3 apontam para o **mesmo** projeto Supabase (o cérebro mora 
   recursão via helpers `is_org_member`/`is_org_owner`.
 - **Branding** (`0003`): `theme_templates` (catálogo) + `org_branding` — a "cara" é DADO;
   contrato de tokens único p/ portal (CSS vars) e app (theme tokens).
-- **Domínios** (`0004`): `org_domains` — subdomínio `<slug>.educaty.app` + domínio próprio.
+- **Domínios** (`0004`): `org_domains` — subdomínio `<slug>.listeny.app` + domínio próprio.
 - **Afiliados** (`0005`-`0007`): programa da plataforma (modelo VamAI) — indica o professor
   pagante; comissão/atribuição first-touch; campanhas/cupons/trial.
 - **Conectores** (`0008`): encaixe universal (live_video/payment/storage/calendar) por tenant.

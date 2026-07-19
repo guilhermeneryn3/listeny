@@ -1,4 +1,4 @@
--- Educaty — 0007 — campanhas, códigos promocionais e trilha de atribuição (marketing).
+-- Listeny — 0007 — campanhas, códigos promocionais e trilha de atribuição (marketing).
 -- Motor único: cupom de trial (marketing próprio) + cupom de afiliado alimentam a atribuição
 -- first-touch (colunas já em profiles, 0001). Gerência pelo painel N3; resgate pela edge
 -- function `redeem-code` (service-role). App/portal não tocam direto. Trancado a service-role.

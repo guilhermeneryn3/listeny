@@ -1,4 +1,4 @@
-// Educaty — Edge Function `admin-delete-account`
+// Listeny — Edge Function `admin-delete-account`
 // Apaga a conta de um usuário A PEDIDO DO PAINEL N3 (servidor-a-servidor). O N3 chama com o
 // segredo compartilhado em `x-admin-secret` e passa o `user_id`. A lógica de apagamento é a
 // mesma da `delete-account` (dono via JWT): `_shared/erase-user.ts`.

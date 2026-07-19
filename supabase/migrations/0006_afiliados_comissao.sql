@@ -1,4 +1,4 @@
--- Educaty — 0006 — comissão de afiliado: config, atribuição, eventos, NF, pagamento, avisos.
+-- Listeny — 0006 — comissão de afiliado: config, atribuição, eventos, NF, pagamento, avisos.
 -- Taxas = DADO editável no painel (affiliate_settings global + affiliates.*_override por
 -- afiliado). Taxa efetiva = coalesce(override, global), resolvida pelo rail e CONGELADA no
 -- evento. Eventos criados por service-role; o afiliado só LÊ. Modelo inicial (VamAI): entrada

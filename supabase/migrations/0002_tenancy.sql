@@ -1,6 +1,6 @@
--- Educaty — 0002 — multi-tenant: orgs (tenants) + memberships.
+-- Listeny — 0002 — multi-tenant: orgs (tenants) + memberships.
 -- Um `org` é a MARCA do professor/criador (workspace white-label): tem slug (subdomínio
--- <slug>.educaty.app), tier de assinatura e membros. Um auth.users pode ser owner de um org
+-- <slug>.listeny.app), tier de assinatura e membros. Um auth.users pode ser owner de um org
 -- e student de outro. O tier do org é a assinatura SaaS-branca (só o servidor escreve).
 --
 -- RLS sem recursão: as políticas usam helpers SECURITY DEFINER (is_org_member/is_org_owner)

@@ -1,4 +1,4 @@
--- Educaty — 0010 — RPCs administrativas que o painel N3 chama (service-role).
+-- Listeny — 0010 — RPCs administrativas que o painel N3 chama (service-role).
 -- force_delete_affiliate: apaga afiliado À FORÇA (limpeza de teste). Só o OWNER dispara na UI
 -- do N3. Respeita a ordem dos FKs `on delete restrict`. Afiliado real que já operou deve ser
 -- ARQUIVADO (status='archived'), não apagado.

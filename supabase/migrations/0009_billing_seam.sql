@@ -1,11 +1,11 @@
--- Educaty — 0009 — seam de faturamento: prevê OS DOIS modelos no schema desde já.
+-- Listeny — 0009 — seam de faturamento: prevê OS DOIS modelos no schema desde já.
 --
--- (A) ATIVO — assinatura SaaS-branca: o professor/org assina o Educaty. `orders` registra a
+-- (A) ATIVO — assinatura SaaS-branca: o professor/org assina o Listeny. `orders` registra a
 --     cobrança da assinatura do org (espelha vamai-web orders); a entitlement/tier do org é
 --     concedida por revenuecat-sync (service-role). Afiliado ganha sobre ISTO (0006).
 --
 -- (B) INERTE — marketplace (venda-ao-aluno): quando ligado numa fase futura, o org VENDE ao
---     aluno e o Educaty RETÉM `platform_fee`. As tabelas existem como CONTRATO, com RLS
+--     aluno e o Listeny RETÉM `platform_fee`. As tabelas existem como CONTRATO, com RLS
 --     travada e sem fluxo — nada as escreve ainda. Ligar o marketplace = próxima fase
 --     (split de pagamento, payout e fiscal por tenant, KYC do criador).
 
@@ -42,7 +42,7 @@ create table if not exists public.tenant_sales (
   student_id    uuid references auth.users (id),
   item_ref      text,                               -- curso/mensalidade (definido na fase marketplace)
   gross         numeric(10,2) not null,
-  platform_fee  numeric(10,2) not null default 0,   -- taxa retida pelo Educaty
+  platform_fee  numeric(10,2) not null default 0,   -- taxa retida pelo Listeny
   net_to_tenant numeric(10,2) not null default 0,
   currency      text not null default 'BRL',
   status        text not null default 'pending'

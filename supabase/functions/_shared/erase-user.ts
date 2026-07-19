@@ -1,4 +1,4 @@
-// Educaty — apagamento de conta (compartilhado entre `delete-account` e `admin-delete-account`).
+// Listeny — apagamento de conta (compartilhado entre `delete-account` e `admin-delete-account`).
 //
 // Uma fonte só pra não divergirem. A lógica de LGPD (o QUE apagar) mora aqui; QUEM pode pedir
 // (o próprio dono via JWT vs. um admin via segredo) e a guarda de afiliado ficam em cada função.
@@ -10,7 +10,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 // deno-lint-ignore no-explicit-any
 type Admin = any;
 
-/** Client service-role do projeto do Educaty (apaga qualquer usuário). */
+/** Client service-role do projeto do Listeny (apaga qualquer usuário). */
 export function makeAdmin(): Admin {
   return createClient(
     Deno.env.get('SUPABASE_URL') ?? '',

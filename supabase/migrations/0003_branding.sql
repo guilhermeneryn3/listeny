@@ -1,4 +1,4 @@
--- Educaty — 0003 — branding white-label: a "cara" do tenant é DADO, não código.
+-- Listeny — 0003 — branding white-label: a "cara" do tenant é DADO, não código.
 -- theme_templates = catálogo de aparências (tokens). org_branding = escolha do tenant
 -- (template + logo + overrides de paleta + css opcional). Portal (CSS vars) e app (theme
 -- tokens) consomem o MESMO contrato de tokens abaixo — nunca hardcode de cor na UI.

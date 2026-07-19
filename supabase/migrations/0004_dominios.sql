@@ -1,5 +1,5 @@
--- Educaty — 0004 — domínios do tenant.
--- Todo org tem o subdomínio <slug>.educaty.app (resolvido por orgs.slug, já público).
+-- Listeny — 0004 — domínios do tenant.
+-- Todo org tem o subdomínio <slug>.listeny.app (resolvido por orgs.slug, já público).
 -- Aqui ficam os domínios PRÓPRIOS (escola-do-joao.com). A resolução hostname→org roda no
 -- portal (server). O attach/verificação/SSL real (Vercel API) é fase seguinte; aqui fica o
 -- modelo. Mapeamento não é segredo → leitura pública; verificação só o servidor faz.

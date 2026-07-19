@@ -1,4 +1,4 @@
--- Educaty — 0008 — camada de conectores ("encaixe universal" / socket-and-plug).
+-- Listeny — 0008 — camada de conectores ("encaixe universal" / socket-and-plug).
 -- Toda integração externa entra por AQUI, por tenant — nunca código de um provedor específico
 -- espalhado no núcleo. É onde a AULA AO VIVO (live_video), o pagamento do MARKETPLACE futuro
 -- (payment), storage/calendar plugam. `config` é público (não-segredo); credenciais ficam em

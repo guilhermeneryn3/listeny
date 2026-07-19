@@ -1,10 +1,10 @@
-# Config do Supabase CLI do Educaty.
+# Config do Supabase CLI do Listeny.
 # Depois de criar o projeto no dashboard, rode:
-#   supabase link --project-ref <ref-do-projeto-educaty>
+#   supabase link --project-ref <ref-do-projeto-listeny>
 #   supabase db push
 #   supabase functions deploy revenuecat-sync redeem-code notify-affiliate admin-delete-account
 # Lembre: revenuecat-sync deve ir com "Verify JWT" DESLIGADO (webhook não manda JWT).
-project_id = "educaty"
+project_id = "listeny"
 
 [db]
 major_version = 15
