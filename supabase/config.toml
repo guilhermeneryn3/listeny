@@ -1,0 +1,10 @@
+# Config do Supabase CLI do Educaty.
+# Depois de criar o projeto no dashboard, rode:
+#   supabase link --project-ref <ref-do-projeto-educaty>
+#   supabase db push
+#   supabase functions deploy revenuecat-sync redeem-code notify-affiliate admin-delete-account
+# Lembre: revenuecat-sync deve ir com "Verify JWT" DESLIGADO (webhook não manda JWT).
+project_id = "educaty"
+
+[db]
+major_version = 15

@@ -1,0 +1,35 @@
+# deps
+node_modules/
+.pnp
+.pnp.js
+
+# expo / rn
+.expo/
+dist/
+web-build/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+ios/
+android/
+
+# env / segredos
+.env
+.env.local
+.env*.local
+
+# supabase (local)
+supabase/.branches/
+supabase/.temp/
+
+# logs / sistema
+npm-debug.*
+*.log
+.DS_Store
+Thumbs.db
+
+# ts
+*.tsbuildinfo
